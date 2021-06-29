@@ -14,7 +14,6 @@ HINT: Look at the tests to see how the callback functions are used.
 ------------------------------------------------------------------------------------------------ */
 
 function upper(str) {
-  
   return str.toUpperCase();
 }
 
@@ -23,11 +22,13 @@ function lower(str) {
 }
 
 const updateAnimal = (arr, callback) => {
-  let newArray=[];
-  arr.sort()
-for(x in arr){newArray.push(x)}
-return newArray;
+  let newArray = arr.map(item => {
+
+    return callback(item);
+  });
+  return newArray;
 };
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -38,8 +39,18 @@ For example: 'Cat' would come before 'apple'
 ------------------------------------------------------------------------------------------------ */
 
 const sortNames = (arr) => {
-  // Solution code here...
+  arr.sort((x,y)=>{
+    if (x>y) {
+      return 1;
+    } else if (x<y) {
+      return -1;
+    } else {
+      return 0;
+    }
+  });
+  return arr;
 };
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
@@ -50,13 +61,21 @@ HINT: Beware... JS default is "Lexical" ordering.
 ------------------------------------------------------------------------------------------------ */
 
 const sortNumbers = (arr) => {
-  let newArray=[];
- arr.sort((a,b) => {
-   return newArray.push(a - b)
+  arr.sort((x,y)=>{
+    if (x>y) {
 
-});
-return newArray;
+      return 1;
+    } 
+    else if(x<y){
+      return -1;
+    }
+    else{
+      return 0;
+    }
+  });
+  return arr;
 };
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
@@ -67,8 +86,21 @@ HINT: Do it with a custom sort callback, not with using `.reverse()`. ;)
 ------------------------------------------------------------------------------------------------ */
 
 const sortBackwards = (arr) => {
-  // Solution code here...
+  arr.sort((x,y)=>{
+    if (x<y) {
+      return 1;
+    } 
+    else if(x>y){
+      return -1;
+    }
+    else{
+      return 0;
+    }
+  });
+  return arr;
 };
+
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
@@ -81,8 +113,20 @@ For example, ['Alphabet', 'Zebra', 'alphabet', 'carrot'] is correctly sorted.
 ------------------------------------------------------------------------------------------------ */
 
 const alphabetize = (arr) => {
-  // Solution code here...
+  arr.sort((x,y)=>{
+    if (x>y) {
+      return 1;
+    } 
+    else if(x<y){
+      return -1;
+    }
+    else{
+      return 0;
+    }
+  });
+  return arr;
 };
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
@@ -98,7 +142,18 @@ Here is an example of the input:
 ------------------------------------------------------------------------------------------------ */
 
 const sortByPrice = (arr) => {
-  // Solution code here...
+  arr.sort((x,y)=>{
+    if (x.price>y.price) {
+      return 1;
+    } 
+    else if(x.price<y.price){
+      return -1;
+    }
+    else{
+      return 0;
+    }
+  });
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
