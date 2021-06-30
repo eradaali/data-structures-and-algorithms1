@@ -41,20 +41,16 @@ Write a function named `greeting` that takes in a single string and returns the 
 Then, write a function named `speaker` that takes in an array of strings and a callback function. 
 Use `forEach` to build a new array of strings, each string modified by the callback. Return the new array. 
 ------------------------------------------------------------------------------------------------ */
-const greeting = (arr) => {
-  let newArray = [];
-  arr.forEach(element => {
-    newArray.push((element + '!').toUpperCase());
+const greeting = (word) => word.toUpperCase()+'!';
+
+const speaker = (words, callback) => {
+  let newArray=[];
+  words.forEach((item)=>{
+    newArray.push(callback(item));
   });
-  return newArray
+  return newArray;
 };
-const speaker = (arr, callback) => {
-  let localArray = [];
-  arr.forEach(element => {
-    localArray.push(element, newArray)
-  });
-  return (localArray)
-};
+
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
 Write a function named addValues that takes in an array and a value and pushes the value into the array. This function does not need a return statement.
