@@ -4,9 +4,10 @@
 
 CHALLENGE 1 - Review
 
-Use the characters data below for all of the challenges except challenge 2 and 3.
+Use the characters data be
 
-Write a function named sortByChildren that sorts the characters below by the number of children in each house (fewest to most). If a house has the same number of children, sort alphabetically by house name.
+Write a function named sortByChildren that sorts the characters below by the number of 
+ in each house (fewest to most). If a house has the same number of children, sort alphabetically by house name.
 
 ------------------------------------------------------------------------------------------------ */
 let characters = [
@@ -54,22 +55,25 @@ let characters = [
   }
 ];
 
-const sortByChildren = (charArray) => {
-  charArray.sort((a, b) => {
-    if (a.children.length > b.children.length) {
-
+const sortByChildren = (charArray) => 
+{
+  charArray.sort((x, y) => {
+    if (x.children.length > y.children.length)
+     {
       return 1;
-    } else if (a.children.length == b.children.length) {
-      let n = a.house.localeCompare(b.house);
-      return n;
-    } else if (a.children.length < b.children.length) {
+    } else if (x.children.length == y.children.length) {
+      let value = x.house.localeCompare(y.house);
+      return value;
+    } else if (x.children.length < y.children.length) {
       return -1;
-    } else {
-      return 0;
+    } 
+    else
+     { return 0;
     }
   });
+
   return charArray;
-};
+}
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -78,17 +82,19 @@ Write a function named containsW that takes in a string. This function should us
 
 ------------------------------------------------------------------------------------------------ */
 
-const containsW = (str) => {
-  let validate = /w/g;
-  let resuult = validate.test(str);
-  return resuult;
-};
+const containsW = (str) =>
+ {
+  let value = /w/g;
+  let result = value.test(str);
+  return result;
+}
 
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
 
-Write a function named isNum that takes in a string or number of any length. This function should use a regular expression pattern to return true if the input contains a number, and false if the input does not contain a number.
+Write a function named isNum that takes in a string or number of any length. This function should use a 
+regular expression pattern to return true if the input contains a number, and false if the input does not contain a number.
 
 For example:
 12345 returns true
@@ -97,11 +103,12 @@ For example:
 'hello world' returns false
 ------------------------------------------------------------------------------------------------ */
 
-const isNum = (input) => {
-  let validate = /[0-9]/g;
-  let result = validate.test(input);
+const isNum = (input) => 
+{
+  let value = /[0-9]/g;
+  let result = value.test(input);
   return result;
-};
+}
 
 
 /* ------------------------------------------------------------------------------------------------
@@ -112,11 +119,13 @@ Write a function named containsWorld that takes in a string or number of any len
 ------------------------------------------------------------------------------------------------ */
 
 const containsWorld = (input) => {
-  let validate = /world/g;
-  let result = validate.test(input);
-  return result;
 
-};
+  let value = /world/g;
+  let res = value.test(input);
+
+  
+  return res;
+}
 
 
 /* ------------------------------------------------------------------------------------------------
@@ -128,12 +137,15 @@ Return an array containing all the matches.
 ------------------------------------------------------------------------------------------------ */
 
 const isCapitalized = (str) => {
-
+  let newArray=[];
   if(str.match(/\b[A-Z](\w)*/g)) {
+
     return str.match(/\b[A-Z](\w)*/g);
   }
+
   else {
-    return [];
+
+    return newArray;
   }
 };
 
@@ -145,16 +157,16 @@ Write a function named citiesAtoJ that takes in an array of city names and uses 
 ------------------------------------------------------------------------------------------------ */
 
 const citiesAtoJ = (arr) => {
-
-  let newArray = [];
-  arr.map((item) => {
-    let regex = /^[A-J]/g;
-    let res = regex.test(item);
-    if (res) {
-      newArray.push(item);
+  let newArr = [];
+  arr.map((element) => 
+  {
+    let num1 = /^[A-J]/g;
+    let num2 = num1.test(element);
+    if (num2) {
+      newArr.push(element);
     }
   });
-  return newArray;
+  return newArr;
 
 };
 
