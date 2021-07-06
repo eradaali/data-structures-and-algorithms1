@@ -9,14 +9,19 @@ using the 'reduce' method.
 E.g. [4,2,7,5,9,2] -> 9
 ------------------------------------------------------------------------------------------------ */
 const maxInArray = (arr) => {
-  let newArr = arr.reduce((acc, value) => {
-    if (value > acc) {
-      acc = value;
+  let newArray = arr.reduce((element, value) => {
+    if (value > element)
+     {
+      element = value;
     }
-    return acc;
-  }, 0);
-  return newArr;
-};
+
+    return element;
+  },
+  0
+  );
+  return newArray;
+}
+
 
 
 /* ------------------------------------------------------------------------------------------------
@@ -32,10 +37,11 @@ const courseInfo = {
   finalExam: true
 };
 
-const getCourseKeys = (obj) => {
-  let keysArr = Object.keys(obj);
-  return keysArr;
-};
+const getCourseKeys = (obj) => 
+{
+  let keyArray = Object.keys(obj);
+  return keyArray;
+}
 
 
 /* ------------------------------------------------------------------------------------------------
@@ -46,18 +52,20 @@ Write a function named checkValues that takes in an object and a value and retur
 
 ------------------------------------------------------------------------------------------------ */
 
-const checkValues = (obj, value) => {
-  let result;
-  let valuesArr = Object.values(obj);
-  valuesArr.forEach(item => {
-    if (item == value) {
-      result = true;
+const checkValues = (obj, num) => {
+  let res;
+  let valueOfArray = Object.values(obj);
+  valueOfArray .forEach(element =>
+     {
+    if (element == num) {
+      res = true;
     } else {
-      result = false;
+      res = false;
     }
-  });
-  return result;
-};
+  }
+  );
+  return res;
+}
 
 
 /* ------------------------------------------------------------------------------------------------
@@ -80,13 +88,14 @@ HR has asked you to change the data to make it easier to print so that it looks 
 ------------------------------------------------------------------------------------------------ */
 
 const updateNumbers = (obj) => {
-  let newArr = [];
-  let objToArr = Object.entries(obj);
-  objToArr.forEach(item => {
-    newArr.push(item.join(': '));
+  let newArray = [];
+  let objToArray = Object.entries(obj);
+  objToArray.forEach(element =>
+     {
+    newArray.push(element.join(': '));
   });
-  return newArr;
-};
+  return newArray;
+}
 
 
 
@@ -141,12 +150,13 @@ const characters = [
 ];
 
 const getHouses = (arr) => {
-  let houses = [];
-  arr.map(item => {
-    houses.push(item.house);
+  let newArray = [];
+  arr.map(element => 
+    {
+    newArray.push(element.house);
   });
-  return houses;
-};
+  return newArray;
+}
 
 
 /*------------------------------------------------------------------------------------------------
@@ -162,19 +172,23 @@ hasChildrenValues(characters, 'Sansa') will return false
 ------------------------------------------------------------------------------------------------ */
 
 const hasChildrenValues = (arr, character) => {
-  let result;
-  let namesArr = [];
-  arr.map(item => {
-    if (item.name==character) {
-      if (item.children) {
-        result= true;
-      }else{
-        result = false;
+  let res;
+  arr.map(element => 
+    {
+    if (element.name==character)
+     {
+      if (element.children) 
+      {
+        res= true;
+      }
+      else
+      {
+        res = false;
       }
     }
   });
-  return result;
-};
+  return res;
+}
 
 
 /* ------------------------------------------------------------------------------------------------
