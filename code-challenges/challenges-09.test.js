@@ -8,7 +8,8 @@ using the 'reduce' method.
 
 E.g. [4,2,7,5,9,2] -> 9
 ------------------------------------------------------------------------------------------------ */
-const maxInArray = (arr) => {
+const maxInArray = (arr) =>
+ {
   let newArray = arr.reduce((element, value) => {
     if (value > element)
      {
@@ -19,7 +20,7 @@ const maxInArray = (arr) => {
   },
   0
   );
-  
+
   return newArray;
 }
 
@@ -183,6 +184,7 @@ const hasChildrenValues = (arr, character) => {
         res= true;
       }
       else
+      
       {
         res = false;
       }
