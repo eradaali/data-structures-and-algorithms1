@@ -19,6 +19,7 @@ const maxInArray = (arr) => {
   },
   0
   );
+  
   return newArray;
 }
 
