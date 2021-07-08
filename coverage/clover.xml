@@ -1,6 +1,76 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <coverage generated="1625773153537" clover="3.2.0">
   <project timestamp="1625773153537" name="All files">
+=======
+
+<coverage generated="1625169752545" clover="3.2.0">
+  <project timestamp="1625169752545" name="All files">
+
+
+<coverage generated="1625083546614" clover="3.2.0">
+  <project timestamp="1625083546614" name="All files">
+
+
+<coverage generated="1625035479164" clover="3.2.0">
+  <project timestamp="1625035479164" name="All files">
+
+
+<coverage generated="1625003292613" clover="3.2.0">
+  <project timestamp="1625003292613" name="All files">
+
+
+<coverage generated="1625002304305" clover="3.2.0">
+  <project timestamp="1625002304305" name="All files">
+
+
+<coverage generated="1625000923726" clover="3.2.0">
+  <project timestamp="1625000923726" name="All files">
+
+
+<coverage generated="1624998519289" clover="3.2.0">
+  <project timestamp="1624998519289" name="All files">
+
+
+<coverage generated="1624633737055" clover="3.2.0">
+  <project timestamp="1624633737055" name="All files">
+
+
+<coverage generated="1624554667712" clover="3.2.0">
+  <project timestamp="1624554667712" name="All files">
+
+
+<coverage generated="1624481337053" clover="3.2.0">
+  <project timestamp="1624481337053" name="All files">
+
+
+<coverage generated="1624398380893" clover="3.2.0">
+  <project timestamp="1624398380893" name="All files">
+
+
+<coverage generated="1624358066194" clover="3.2.0">
+  <project timestamp="1624358066194" name="All files">
+
+<coverage generated="1624303524658" clover="3.2.0">
+  <project timestamp="1624303524658" name="All files">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> bc10be09c3a0f01e546a4db11cb3dbdc7d2ad6da
     <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0" elements="0" coveredelements="0" complexity="0" loc="0" ncloc="0" packages="0" files="0" classes="0"/>
   </project>
 </coverage>
