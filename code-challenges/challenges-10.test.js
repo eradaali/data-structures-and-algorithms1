@@ -145,7 +145,12 @@ const errands = [
 ];
 
 const howManyTreats = (arr) => {
-  return arr[2].items[1].quantity;
+  // Solution code here...
+  let newArray = arr.reduce(
+    (acc, cur) =>
+      cur.store === 'Pet store' ? cur.items.reduce((acc, cur) =>
+       (cur.name === 'Treats' ? acc + cur.quantity : acc),0): acc, 0);
+  return newArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
